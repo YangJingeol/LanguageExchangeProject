@@ -3,6 +3,7 @@ package com.member.dao;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
 import com.meeting.dao.*;
 
 import java.util.*;
@@ -14,7 +15,7 @@ public interface MemberMapper {
 	@Select("SELECT email,pwd,nickname,name,nation,tel,lang,language,pname,admin,intro,sex FROM lmember WHERE email=#{email}")
 	public MemberDTO memberGetInfo(String email);
 	// 회원가입
-	@Insert("INSERT INTO Lmember VALUES(#{email},#{pwd},#{name},#{nickname},#{sex},#{age},#{nation},#{tel},#{lang},#{language},#{intro},#{pname},#{psize},#{admin}")
+	@Insert("INSERT INTO Lmember VALUES(#{email},#{pwd},#{name},#{nickname},#{sex},#{age},#{nation},#{tel},#{lang},#{language},#{intro},#{pname},#{psize},#{admin})")
 	public void memberInsert(MemberDTO d);
 	// 회원정보 수정
 	@Update("UPDATE lmember SET pwd=#{pwd},nickname=#{nickname},tel=#{tel},lang=#{lang},intro=#{intro} WHERE email=#{email}")

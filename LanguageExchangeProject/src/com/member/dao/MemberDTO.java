@@ -15,7 +15,18 @@ public class MemberDTO {
    private String pname;
    private String lang;
    private int psize;
-   public String getLanguage() {
+   private String admin;
+   private String intro;
+   
+   
+   
+   public String getAdmin() {
+	return admin;
+}
+public void setAdmin(String admin) {
+	this.admin = admin;
+}
+public String getLanguage() {
       return language;
    }
    public String getLang() {
@@ -40,15 +51,6 @@ public class MemberDTO {
       this.psize = psize;
    }
 
-   private String intro;
-      private char admin;
-
-   public char getAdmin() {
-      return admin;
-   }
-   public void setAdmin(char admin) {
-      this.admin = admin;
-   }
    public String getEmail() {
       return email;
    }

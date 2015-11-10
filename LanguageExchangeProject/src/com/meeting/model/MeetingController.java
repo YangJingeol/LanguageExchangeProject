@@ -75,7 +75,6 @@ public class MeetingController {
 		d.setM_place(m_place);
 		d.setM_location(m_location);
 		d.setM_email(m_email);
-		d.setM_nickname(md.getNickname());
 		d.setM_tel(md.getTel());
 		
 		if(filename==null)

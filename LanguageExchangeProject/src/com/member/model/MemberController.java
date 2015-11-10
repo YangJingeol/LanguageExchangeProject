@@ -115,6 +115,8 @@ public class MemberController {
 		      d.setTel(tel);
 		      d.setLanguage(language);
 		      d.setLang(lang);
+		      String admin="n";
+		      d.setAdmin(admin);
 		      
 		      if(filename==null)
 		      {

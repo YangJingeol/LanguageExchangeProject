@@ -167,11 +167,11 @@ div#intro h2 {
 						<td>	
 						<p> <c:if test="${d.intro!=null }">
 						    <span>
-						    <textarea rows="8" cols="100" id= intro name=intro >${d.intro }</textarea>
+						    <textarea rows="8" cols="100" id=intro name=intro >${d.intro }</textarea>
 						    </c:if>
 						    <c:if test="${d.intro==null }">
 						    <span>
-						    <textarea rows="8" cols="100" id= intro name=intro placeholder="자기소개가 없습니다."></textarea>
+						    <textarea rows="8" cols="100" id=intro name=intro placeholder="자기소개가 없습니다."></textarea>
 						    </c:if>
 						    </span>
 						    <br>
@@ -273,11 +273,11 @@ function joinsubmit(){
 		alert("휴대폰번호는 숫자만 입력해주세요.");		
 		return;
 	}			
-	if(!$("#intro").val()) {
+/* 	if(!$("#intro").val()) {
 		$("#intro").focus();
 		alert("자기소개를 입력해주세요.");		
 		return;
-	}	
+	}	 */
 
 	alert("수정되었습니다.");	
 	f.submit();	

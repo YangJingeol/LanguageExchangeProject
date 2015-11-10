@@ -14,7 +14,7 @@ public interface MeetingMapper {
 			statement="SELECT NVL(MAX(m_no)+1,1) as m_no FROM meeting")
 	@Insert("INSERT INTO meeting VALUES(#{m_no},#{m_lang1},#{m_lang2},#{m_lang1num},#{m_lang2num},"
 			+"#{m_title},#{m_summary},#{m_content},#{m_meetingDate1},#{m_meetingDate2},"
-			+"#{m_partDate1},#{m_partDate2},#{m_place},#{m_location},#{m_email},#{m_nickname},#{m_tel},0,0,#{m_filename},#{m_filesize})")
+			+"#{m_partDate1},#{m_partDate2},#{m_place},#{m_location},#{m_email},#{m_tel},0,0,#{m_filename},#{m_filesize})")
 	public void meetingInsert(MeetingDTO d);
 	// 모임 내용
 	@Select("SELECT m_no,m_lang1,m_lang2,m_lang1num,m_lang2num,m_title,m_summary,m_content,"

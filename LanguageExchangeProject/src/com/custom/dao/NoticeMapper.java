@@ -74,7 +74,7 @@ public interface NoticeMapper {
 	@Select("SELECT q_no,q_title,q_content,q_regdate,q_regdate,q_mail,q_pwd,q_hit,q_answer,depth,rownum FROM qna WHERE q_No=#{no}")
 	public M_QnaVO M_qna_boardContentData(int no);
 	
-	@Insert("INSERT INTO qna(q_No,q_Title,q_Content,q_Regdate,q_Mail) VALUES((SELECT NVL(MAX(q_no)+1,1) FROM qna),#{q_title},#{q_content},SYSDATE,#{q_email})")
+	@Insert("INSERT INTO qna(q_No,q_Title,q_Content,q_Regdate,q_Mail) VALUES((SELECT NVL(MAX(q_no)+1,1) FROM qna),#{q_title},#{q_content},SYSDATE,#{q_Mail})")
 	public void M_qna_boardInsert(M_QnaVO vo);
 	
 	  
