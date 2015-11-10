@@ -6,7 +6,8 @@
     <servlet-class>com.controller.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>C:\Users\hong\git\pro\LanguageExchangeProject\WebContent\WEB-INF\applicationContext.xml</param-value>
+      <!-- <param-value>C:\Users\hong\git\pro\LanguageExchangeProject\WebContent\WEB-INF\applicationContext.xml</param-value> -->
+      <param-value>C:\Users\Zoosix\git\LanguageExchangeProject\LanguageExchangeProject\WebContent\WEB-INF\applicationContext.xml</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
