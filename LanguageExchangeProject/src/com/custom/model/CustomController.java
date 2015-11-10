@@ -16,7 +16,6 @@ import com.controller.RequestMapping;
 import com.custom.dao.FaqVO;
 import com.custom.dao.M_QnaVO;
 import com.custom.dao.NoticeDAO;
-import com.custom.dao.NoticeDAO1;
 import com.custom.dao.NoticeDTO;
 import com.custom.dao.QnaVO;
 
@@ -128,7 +127,7 @@ public class CustomController {
 	@RequestMapping("n_delete.do")
 	public String notice_delete(HttpServletRequest req, HttpServletResponse res){
 		String nno=req.getParameter("no");
-		NoticeDAO1 dao = new NoticeDAO1();
+		NoticeDAO dao=NoticeDAO.newInstance();
 		dao.notice_delete(Integer.parseInt(nno));
 		return "notice.do";
 	}
@@ -197,9 +196,8 @@ public class CustomController {
 		String word = req.getParameter("word");
 		System.out.println(word);
 		NoticeDAO dao=NoticeDAO.newInstance();
-		FaqVO list=dao.faq_searchListData(word);
+		List<FaqVO> list=dao.faq_searchListData(word);
 		req.setAttribute("list", list);
-		list.setDb_fday(sdf.format(list.getF_regdate()));
 		
 		int count=dao.faq_searchboardRowCount(word);
 		int total=(int)(Math.ceil(count/10.0));
