@@ -175,7 +175,7 @@ public class MeetingController {
     	  WishDTO d= new WishDTO();
          d.setW_email(email);
          d.setW_mno(Integer.parseInt(mno));
-         int count=dao.myWishCount(email);
+         int count=dao.wishCount(d);
          System.out.println("count:"+count);
          if(count==0){
       	   dao.meetingWish(d);

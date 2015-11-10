@@ -289,6 +289,23 @@ public class MeetingDAO {
     	}
     	return count;
     }
+    public int wishCount(WishDTO d){
+    	int count=0;
+    	try{
+    		session=ssf.openSession();
+    		mapper=(MeetingMapper)session.getMapper(MeetingMapper.class);
+    		count=mapper.wishCount(d);
+    	}catch(Exception ex)
+    	{
+    		System.out.println(ex.getMessage());
+    	}
+    	finally
+    	{
+    		if(session!=null)
+    			session.close();
+    	}
+    	return count;
+    }
     // 모임 참가자 리스트
     public List<MeetingMemberDTO> meetingMemberData(int mm_mno)
     {

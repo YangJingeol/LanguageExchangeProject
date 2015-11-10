@@ -194,13 +194,13 @@ div#intro h2 {
 			<c:if test="${count==0 }">
 				<center><h2>No wish meeting</h2></center>
 			</c:if>
-			<c:if test="${ count!=0}">
-
+			<c:if test="${count!=0}">
+			
 			<c:forEach var="dto" items="${list }">
 			<div class="view view-first" id="${dto.m_no }" style="background-image: url('images/main/meeting.jpg'); background-repeat: no-repeat;">
 			<div class="groupCard--gradient">
 				<span id="tit">${dto.m_title }</span>
-				<span id="tit1"><br> 모임일 : 2015-11-25 ~ 2015-12-20
+				<span id="tit1"><br> 모임일 : ${dto.m_partDate1 } ~ ${dto.m_partDate2 }
 				<br>장소: ${dto.m_location}( ${dto.m_place} )</span>
 			</div>
 				<div class="mask">
@@ -208,9 +208,9 @@ div#intro h2 {
 					<p sstyle="font-family:다음;">${dto.m_summary }</p>
 					<ul align=left style="font-size: 12px; list-style: none;" class="detail_list">
 						<li>접수마감일 : <span>2015-10-30</span></li>
-						<li>개설자 아이디 : ${dto.m_email } ${dto.m_wish }</li>
-						<a href="meeting_detail.do" class="info" style="margin-left:30px; margin-top:10px;">모임참여</a>
-						<a href="meeting_zzim.do?mno=${dto.m_no }" class="info">찜하기</a>
+						<li>개설자 아이디 : ${dto.m_email }</li>
+						<a href="meeting_detail.do?no=${dto.m_no }" class="info" style="margin-left:30px; margin-top:10px;">모임참여</a>
+						<a href="meeting_zzim.do?mno=${dto.m_no }" class="info">찜취소</a>
 <%-- 						<a href="meeting_zzim.do?mno=${dto.m_no }" class="info" style="background:transparent; !important">
 						<img src="images/nowish.png" width="22px" height="26px" /> --%>
 						</a>
@@ -218,6 +218,7 @@ div#intro h2 {
 				</div>
 			</div>
 		</c:forEach>
+
 		</c:if>
 	</div>
 

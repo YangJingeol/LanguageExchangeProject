@@ -23,11 +23,11 @@ public interface MeetingMapper {
 	public MeetingDTO meetingDetail(int m_no);
 	// 모임 리스트
 	@Select("SELECT m_no,m_lang1,m_lang2,m_lang1num,m_lang2num,m_title,m_summary,m_content,"
-			+"m_meetingDate1,m_partDate1,m_place,m_location,m_email,m_tel,m_end "
+			+"m_meetingDate1,m_partDate1,m_partDate2,m_place,m_location,m_email,m_tel,m_end "
 			+"FROM meeting ORDER BY m_no DESC")
 	public List<MeetingDTO> meetingTableListData();
 	@Select("SELECT m_no,m_lang1,m_lang2,m_lang1num,m_lang2num,m_title,m_summary,m_content,"
-			+ "m_meetingDate1,m_partDate1,m_place,m_location,m_email,m_tel,m_end "
+			+ "m_meetingDate1,m_partDate1,m_partDate2,m_place,m_location,m_email,m_tel,m_end "
 			+ "FROM meeting ORDER BY m_wish DESC")
 	public List<MeetingDTO> meetingTableListData2();
 	// 내 모임 리스트
@@ -37,7 +37,7 @@ public interface MeetingMapper {
 	@Select("SELECT COUNT(*) FROM meetingMember WHERE mm_email=#{mm_email}")
 	public int myMeetingCount(String email);
 	// 모임 검색
-	@Select("SELECT m_no,m_email,m_title,m_partdate2 FROM meeting WHERE lang1 LIKE '%'||#{word}||'%' OR lang2 LIKE '%'||#{word}||'%' ORDER BY g_no DESC")
+	@Select("SELECT m_no,m_email,m_title,m_partDate2,m_partDate1,m_location,m_place FROM meeting WHERE m_lang1 LIKE '%'||#{word}||'%' OR m_lang2 LIKE '%'||#{word}||'%' OR m_title LIKE '%'||#{word}||'%' ORDER BY m_no DESC")
 	public List<MeetingDTO> searchMeeting(String word);
 	// 모임 찜
 	@SelectKey(keyProperty="w_no",before=true,resultType=int.class,
@@ -50,11 +50,13 @@ public interface MeetingMapper {
 	public void meetingWishMinus(int mno);
 	@Delete("DELETE FROM wish WHERE w_mno=#{w_mno} AND w_email=#{w_email}")
 	public void myWishDel(WishDTO d);
-    @Select("SELECT m_MeetingDate1,m_partDate2,m_Lang1,m_Lang2,m_Summary,m_title,m_content,m_no "
+    @Select("SELECT m_MeetingDate1,m_partDate2,m_Lang1,m_Lang2,m_location,m_place,m_Summary,m_title,m_content,m_no "
     		+ "FROM wish,meeting WHERE w_email=#{w_email} AND m_no=w_mno")
     public List<MeetingDTO> myWishList(String email);
     @Select("SELECT COUNT(*) FROM wish WHERE w_email=#{w_email}")
     public int myWishCount(String email);
+    @Select("SELECT COUNT(*) FROM wish WHERE w_email=#{w_email} AND w_mno=#{w_mno}")
+    public int wishCount(WishDTO d);
 	// 모임 참여
 	@SelectKey(keyProperty="mm_no",before=true,resultType=int.class,
 			statement="SELECT NVL(MAX(mm_no)+1,1) as mm_no FROM meetingMember")
