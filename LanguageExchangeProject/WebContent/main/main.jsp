@@ -171,10 +171,10 @@ a.dropdown-toggle:HOVER
 					<ul class="nav navbar-nav" id="navbar-collapse-1" style="z-index:1000;">
 				</c:if> <c:if test="${sessionScope.email!=null }">
 					<ul class="nav navbar-nav">
-						  <style type="text/css"> a.dropdown-toggle:HOVER{background-color:transparent !important;} </style> 
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white; padding-top: 0px;">${sessionScope.name}님
-
-								환영합니다 <span class="glyphicon glyphicon-user pull-right"></span>
+						  <style type="text/css"> a.dropdown-toggle:HOVER{background-color:transparent !important;} </style>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white; padding-top: 0px;">
+						<img src=${sessionScope.path } alt="Sample" class="sample" style="width:26px; position: absolute; margin-left: -30px; margin-top: -5px;">
+						${sessionScope.name}님 환영합니다 <span class="glyphicon glyphicon-user pull-right"></span>
 						</a>
 							<ul class="dropdown-menu">
 								<li><a href="modify.do"><span

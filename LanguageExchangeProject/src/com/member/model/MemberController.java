@@ -77,7 +77,7 @@ public class MemberController {
 	{
 		try
 		{
-			String path=req.getSession().getServletContext().getRealPath("/")+"human" + File.separator + "multiupload" + File.separator;
+			 String path=req.getSession().getServletContext().getRealPath("/")+"human" + File.separator + "multiupload" + File.separator;
 		      System.out.println("path="+path);
 		      File file = new File(path);
 		      if (!file.exists()) {
