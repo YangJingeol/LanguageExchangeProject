@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'
+  src='http://code.jquery.com/jquery-git2.js'></script>
+<link rel="stylesheet" type="text/css"
+  href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script type='text/javascript'
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type='text/javascript'
+  src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<style type='text/css'>
+.myMenu .nav, .myMenu .collapse, .myMenu .dropup, .myMenu .dropdown {
+  position: static;
+}<!--   w  ww .  ja va2s . co  m-->
+
+.myMenu .container {
+  position: relative;
+}
+
+.myMenu .dropdown-menu {
+  left: auto;
+}
+
+.myMenu .nav.navbar-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.myMenu .myMenu-content {
+  padding: 20px 30px;
+}
+
+.myMenu .dropdown.myMenu-fw .dropdown-menu {
+  left: 0;
+  right: 0;
+}
+</style>
+
+</head>
+<body>
+  <div class="navbar myMenu navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse"
+          data-target="#navbar-collapse-1" class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">My Menu</a>
+      </div>
+      
+      
+      <div id="navbar-collapse-1" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+          <!-- Classic dropdown -->
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+            class="dropdown-toggle">Classic<b class="caret"></b></a>
+            <ul role="menu" class="dropdown-menu">
+              <li><a tabindex="-1" href="#"> Action </a></li>
+              <li><a tabindex="-1" href="#"> Another action </a></li>
+              <li><a tabindex="-1" href="#"> Something else here </a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1" href="#"> Separated link </a></li>
+            </ul></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

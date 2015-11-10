@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean class="com.main.model.MainController"/>
+	<bean class="com.member.model.MemberController"/>
+	<bean class="com.meeting.model.MeetingController"/>
+	<bean class="com.custom.model.CustomController"/>
+	<bean class="com.qna.model.QnaController"/>
+</beans>

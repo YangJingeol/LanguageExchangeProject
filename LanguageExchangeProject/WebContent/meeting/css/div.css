@@ -1,0 +1,369 @@
+*{margin:0;padding:0}
+
+#body {
+	float: left;
+    font-family: "다음";
+    font-size: 15px;
+    color: #666666;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    border-left: solid 1px #d8d8d8;
+	border-right: solid 1px #d8d8d8;
+}
+#div_1{
+	color: #333;
+    font-size: 30px;
+    text-align: left;
+    line-height: 34px;
+    font-weight: normal;
+    border-bottom: 1px solid #d8d8d8;
+    margin: 40px;
+    overflow: hidden;
+}
+#div_2{
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	border: solid 1px #d8d8d8;
+}
+#div_2 .div_2-1{
+	width: 30%;
+	float: left;
+	margin: 0px;
+}
+#div_2 .div_2-1 ul{
+    float: left;
+    margin: 0px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 46px;
+    /* border: 1px solid #d8d8d8; */
+}
+#div_2 .div_2-1 ul li{
+	height: 60px;
+	width: 49.4%;
+	margin-left:0px;
+	margin-right: 0px;
+	padding-left:0px;
+	padding-right: 0px;
+	display: inline-table;
+	text-align: center;
+	vertical-align: middle;
+    line-height: 46px;
+    border-right: 1px solid #d8d8d8;
+}
+#div_2 .div_2-2{
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+    background: #fff;
+    text-align: left;
+    width: 60%;
+    height: 332px;
+    padding: 0px;
+}
+#div_2 .div_2-2 ul li{
+	height: 20px;
+	width: 49%;
+	display: inline-table;
+	padding-bottom: 5px;
+	
+}
+#div_2 .div_2-2 .first li{
+	height: 20px;
+	width: 100%;
+	display: inline-table;
+    margin-top: 10px;	
+}
+#div_2 .div_2-2 .second li{
+	height: 20px;
+	width: 100%;
+	display: inline-table;
+}
+#div_2 .div_2-2 .bar{
+	height: 18px;
+	width: 100%;
+	display: inline-table;
+	background-position: center;
+    line-height: 10px;
+    margin-bottom: 0px;
+    vertical-align: bottom;
+    padding-left: 20px;
+}
+#div_2 .div_2-2 .btn_list .endApply{
+	float:left;
+	width:45%;
+	text-align:center;
+	background-color: #2281c0;
+	color: #d4eeff;
+}
+#div_2 .div_2-2 .pro .one{
+	height: 20px;
+	width: 40%;
+	display: inline-table;
+    line-height: 20px;	
+}
+#div_2 .div_2-2 .pro li{
+	height: 25px;
+	width: 25%;
+	display: inline-table;
+    line-height: 20px;	
+}
+.btn_list a{
+	text-decoration: none; !important;
+	display:block;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	height:50px;
+	line-height:48px;
+}
+.btn_list a.end{
+	cursor:default;
+}
+#div_2 .div_2-2 .btn_list .wish{
+	float:left;
+	width:45%;
+	text-align:center;
+	background-color: #1fb56c;
+	color: #d4eeff;
+}
+/* 개설자 정보 */
+#div_3{
+	border: solid 1px #d8d8d8;
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding: 20px;
+	padding-bottom: 10px;
+}
+#div_3 ul{
+	list-style-type: none;	
+}
+#div_3 ul li{
+	margin: 5px;
+	height: 70px;
+	padding-bottom: 0px;
+}
+#div_3 ul .title{
+	/* margin: 10px; */
+	height: 35px;
+	padding-left: 35px;
+	padding-bottom: 10px;
+	border-bottom: solid 1px #d8d8d8;
+}
+/* 메뉴바 */
+#sanchor_wrap{
+	margin: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom: solid 1px #d8d8d8;
+	width: 94%;
+	float: left;
+	background: white;
+	z-index: 1000;
+}
+#sanchor_wrap #sanchor{
+	width: 100%;
+	heigth: 100px;
+	margin: 0px;
+}
+#sanchor_wrap #sanchor a{
+	font-color: #ff0000;
+	bootstrap.min.css:12;
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+}
+#sanchor_wrap #sanchor a:hover{
+	font-color: red;
+	bootstrap.min.css:12;
+	text-decoration: none;
+	border-color: #333;
+}
+/* .on{
+	list-style: none;
+	display: inline-table;
+	width: 175px;
+	height: 50px;
+	border-top: solid 1px BLUE;
+	border-bottom: solid 1px white;
+	border-left:solid 1px BLUE;
+	border-right:solid 1px BLUE;
+	text-align: center;
+	padding-top: 15px;
+	margin: 0px;
+	font-size: 20px;
+	font-color: red;
+} */
+#sanchor a li{
+	list-style: none;
+	display: inline-table;
+	width: 15%;
+	height: 50px;
+	border: solid 1px #d8d8d8;
+	border-bottom: none;
+	text-align: center;
+	padding-top: 15px;
+	margin-left: 0px;
+	margin-right: -5px;
+	font-size: 20px;
+}
+/* 모임 내용 */
+#all_contents{
+	overflow: hidden;
+	width: 94.1%;
+	margin: 40px;
+	margin-top: 0px;
+	border-left: solid 1px #d8d8d8;
+	border-right: solid 1px #d8d8d8;
+	border-bottom: solid 1px #d8d8d8;
+}
+
+/* 상세정보 */
+#div_4{
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding-top: 60px;
+	padding-bottom: 50px;
+	border-bottom: solid 1px #d8d8d8;
+}
+/* 장소 */
+#div_5{
+	float: left;
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding-top: 60px;
+	padding: 20px;
+	height: 500px;
+	align: center;
+	border-bottom: solid 1px #d8d8d8;
+}
+#place{
+	width: 100%;
+	float: left;
+	height: 500px;
+	overflow: hidden;
+	align: center;
+	padding-top: 80px;
+}
+/* 공지 */
+#div_6{
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding-top: 60px;
+	padding-bottom: 50px;
+	border-bottom: solid 1px #d8d8d8;
+}
+/* 후기 */
+#div_7{
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding: 20px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	border-bottom: solid 1px #d8d8d8;
+}
+#div_7 .comment_read{
+	float: left;
+	margin-top: 20px;
+	overflow: hidden;
+}
+#div_7 .comment_write .form-control{
+	float: left;
+	margin-top: 30px;
+	margin-left: 20px;
+	width: 900px;
+	height: 80px;
+	display: inline;
+	overflow: hidden;
+}
+#comment_writeBtn{
+	margin-left: 20px;
+	width: 60px;
+	height: 80px;
+}
+
+#div_8{
+	float: left;
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding: 20px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	border-bottom: solid 1px #d8d8d8;
+}
+/* 참가자 리스트 */
+#div_9{
+	float: left;
+	overflow: hidden;
+	width: 94%;
+	margin: 40px;
+	padding: 20px;
+	padding-left: 0px;
+	padding-right: 30px;
+}
+#memberList{
+	float: left;
+	padding: 0px;
+	overflow: hidden;
+	width: 99%;
+}
+.table-condensed{
+	margin: 20px;
+	width: 100%;
+	
+}
+#list_head tr{
+	border-bottom: solid 2px #c0c0c0;
+}
+#list_head tr th{
+	text-align: center;
+	font-size: 18px;
+	font-style: bold;
+	height: 50px;
+}
+#list_head tr .th5{
+	width: 5%;
+}
+#list_head tr .th15{
+	width: 15%;
+}
+#list_head tr .th20{
+	width: 20%;
+}
+#list_head tr .th35{
+	width: 35%;
+}
+#list_body tr{
+	vertical-align: text-bottom;
+	border-bottom: solid 1px #c0c0c0;
+}
+#list_body tr .memImg{
+	width: 8%;
+	padding-left: 30px;
+}
+#list_body tr .memName{
+	width: 12%;
+}
+#list_body tr .memEmail{
+	width: 38%;
+	padding-left: 50px;
+}
+#list_body tr .memLang{
+	width: 16%;
+	text-align: center;
+}
+#list_body tr .memGen{
+	width: 16%;
+	text-align: center;
+	padding-left: 30px;
+}
+
