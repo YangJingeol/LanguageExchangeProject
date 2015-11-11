@@ -216,8 +216,8 @@ div#intro h2 {
 					<span class="textArea">인천/경기</span></a></li>
 					<li class="menuArea"><a href="meeting_place.do?place=강원">
 					<span class="textArea">강원</span></a></li>
-					<li class="menuArea"><a href="meeting_place.do?place=대전/충천">
-					<span class="textArea">대전/충천</span></a></li>
+					<li class="menuArea"><a href="meeting_place.do?place=대전/충청">
+					<span class="textArea">대전/충청</span></a></li>
 					<li class="menuArea"><a href="meeting_place.do?place=광주/전라">
 					<span class="textArea">광주/전라</span></a></li>
 					<li class="menuArea"><a href="meeting_place.do?place=제주">
@@ -226,7 +226,7 @@ div#intro h2 {
 				</div>
 				
 			<div class="sideMenu1" style="position:absolute; margin-left:-35px;margin-top:300px; width: 175px;">
-		<form class="form-horizontal" method="get" id="search_Form" name="search_form" action="typedetailsearch_ok.do" enctype="multipart/form-data">
+		<form class="form-horizontal" method="get" id="search_Form" name="search_form" action="detailsearch_ok.do" enctype="multipart/form-data">
 			<ul style="list-style-type: none;">
 				<li class="menuArea1" style="text-align: center;">상세 검색</li>
 				<li class="menuArea1">지역:&nbsp;&nbsp;&nbsp;

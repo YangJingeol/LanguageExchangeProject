@@ -90,4 +90,6 @@ public interface MeetingMapper {
 			+ "FROM (SELECT m_no,m_lang1,m_lang2,m_lang1num,m_lang2num,m_title,m_summary,m_content,m_meetingDate1,m_meetingDate2,m_partDate1,m_partDate2,m_place,m_location,m_email,m_tel,m_end,m_wish "
 			+ "FROM meeting WHERE m_location LIKE '%'||#{m_location}||'%') WHERE m_place LIKE '%'||#{m_place}||'%') WHERE m_lang1 LIKE '%'||#{m_lang1}||'%' OR m_lang2 LIKE '%'||#{m_lang1}||'%' ORDER BY m_no DESC)")
 	public int detailSearchForPlaceCount(MeetingDTO d);
+	
+	
 }

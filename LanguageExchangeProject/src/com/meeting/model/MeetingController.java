@@ -247,6 +247,7 @@ public class MeetingController {
 		req.setAttribute("jsp", "../meeting/meeting_place.jsp");
 		return "main/main.jsp";
 	}
+	
 	@RequestMapping("detailsearch_ok.do")
 	public String detailSearchOk(HttpServletRequest req,HttpServletResponse res) throws Exception
 	{
@@ -273,11 +274,36 @@ public class MeetingController {
 		req.setAttribute("count", count);
 		req.setAttribute("list", list);
 		req.setAttribute("jsp", "../meeting/meeting_place.jsp");
+		
 		return "main/main.jsp";
 	}
 	@RequestMapping("typedetailsearch_ok.do")
 	public String typeDetailSearchOk(HttpServletRequest req,HttpServletResponse res) throws Exception
 	{
+		String m_location;
+		m_location = req.getParameter("slocation");
+		System.out.println(m_location);
+		
+		String m_lang1;
+		m_lang1 = req.getParameter("slang");
+		System.out.println(m_lang1);
+		
+		String m_place;
+		m_place = req.getParameter("splace");
+		System.out.println(m_place);
+		
+		MeetingDTO d = new MeetingDTO();
+		d.setM_location(m_place);
+		d.setM_place(m_location);
+		d.setM_lang1(m_lang1);
+		
+		MeetingDAO dao=MeetingDAO.newInstance();
+		List<MeetingDTO> list=dao.detailSearchForPlace(d);
+		int count = dao.detailSearchForPlaceCount(d);
+		req.setAttribute("count", count);
+		req.setAttribute("list", list);
+		req.setAttribute("jsp", "../meeting/meeting_type.jsp");
+		
 		return "main/main.jsp";
 	}
 }
